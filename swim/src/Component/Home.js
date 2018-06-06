@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from './Header';
 import Footer from './Footer';
 import DockDoor from './DockDoor';
+import ASNDisplay from './ASNDisplay';
  
 class Home extends Component {
 	constructor(props) {

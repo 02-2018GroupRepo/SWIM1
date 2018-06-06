@@ -1,13 +1,16 @@
 import React from 'react';
-
+import ASNDisplay from './ASNDisplay';
 class ASNSearch extends React.Component {
-	  
+	displayASN(){
+
+	}  
 
    render() {
    	var styles = {
    		visibility: 'hidden'
    	}
    	let {doorNumber} = this.props;
+   	let {asnDisplay} = this.props;
 
    	if(doorNumber > 0){
    		styles = null;
@@ -22,7 +25,7 @@ class ASNSearch extends React.Component {
 	      		<input type="text" placeholder="Search.." />
 	      		<button className="search-btn">Search</button>
 	      	</form>
-
+	      	<ASNDisplay /> 
 	      	</div>
        
       );
