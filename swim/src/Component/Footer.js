@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-
-class Footer extends React.Component {
+//anthor way to write react components
+export default class Footer extends Component {
    render() {  
 	
       return (
@@ -12,4 +12,3 @@ class Footer extends React.Component {
    }
 }
 
-export default Footer
