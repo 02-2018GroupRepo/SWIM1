@@ -20,6 +20,7 @@ public class AsnDao {
     private final String updateDockDoor = "UPDATE warehouse SET dockDoor = ? WHERE asn = ?";
     private final String updateSerialStatus = "UPDATE itemizedAsn SET status = ? WHERE serial = ? AND asn = ?";
     private final String updateAsnStatus = "UPDATE warehouse SET status = ? WHERE asn = ?";
+    private final String getReceivedList = "SELECT asn FROM warehouse WHERE status = ?";
 
 //    private final String updateDockDoorQuery = "UPDATE warehouse SET dockDoor = ? WHERE asn = ?";
 
@@ -51,6 +52,11 @@ public class AsnDao {
     public List getSerial(Asn asn){
         List serials = jdbcTemplate.queryForList(getSerialQuery, asn.getAsn());
         return serials;
+    }
+
+    public List receivedList(){
+        List receivedList = jdbcTemplate.queryForList(getReceivedList, "RECEIVED");
+        return receivedList;
     }
 
 }
