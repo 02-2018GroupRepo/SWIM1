@@ -6,16 +6,19 @@ public class Asn {
     String expectedArrivalDate;
     String expectedArrivalTime;
     Serial[] serials;
+    int dockDoor;
+
 
     public Asn() {
     }
 
-    public Asn(int asn, String vendorId, String expectedArrivalDate, String expectedArrivalTime, Serial[] serials) {
+    public Asn(int asn, String vendorId, String expectedArrivalDate, String expectedArrivalTime, Serial[] serials, int dockDoor) {
         this.asn = asn;
         this.vendorId = vendorId;
         this.expectedArrivalDate = expectedArrivalDate;
         this.expectedArrivalTime = expectedArrivalTime;
         this.serials = serials;
+        this.dockDoor = dockDoor;
     }
 
     public String getExpectedArrivalDate() {
@@ -57,4 +60,13 @@ public class Asn {
     public void setVendorId(String vendorId) {
         this.vendorId = vendorId;
     }
+
+    public int getDockDoor() {
+        return dockDoor;
+    }
+
+    public void setDockDoor(int dockDoor) {
+        this.dockDoor = dockDoor;
+    }
+
 }

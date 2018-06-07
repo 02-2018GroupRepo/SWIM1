@@ -17,6 +17,9 @@ public class AsnDao {
     private final String insertAsn= "INSERT INTO warehouse VALUES(?,?,?,?,?,?)";
     private final String insertSerial= "INSERT INTO itemizedAsn VALUES(?,?,?)";
     private final String getSerialQuery = "SELECT serial FROM itemizedAsn WHERE asn = ?";
+    private final String updateDockDoor = "UPDATE warehouse SET dockDoor = ? WHERE asn = ?";
+    private final String updateSerialStatus = "UPDATE itemizedAsn SET status = ? WHERE serial = ? AND asn = ?";
+    private final String updateAsnStatus = "UPDATE warehouse SET status = ? WHERE asn = ?";
 
 //    private final String updateDockDoorQuery = "UPDATE warehouse SET dockDoor = ? WHERE asn = ?";
 
@@ -24,6 +27,18 @@ public class AsnDao {
 //        List<Asn> AsnList = jdbcTemplate.query(getASNQuery, new BeanPropertyRowMapper<>(Asn.class));
 //        return AsnList;
 //    }
+
+    public void updateAsnStatus(String status, int asn){
+        jdbcTemplate.update(updateAsnStatus, status, asn);
+    }
+
+    public void updateSerial(String status, int serial, int asn){
+        jdbcTemplate.update(updateSerialStatus, status, serial, asn);
+    }
+
+    public void updateDockDoor(int dockDoor,int asn){
+        jdbcTemplate.update(updateDockDoor, dockDoor, asn);
+    }
 
     public void insertAsn(Asn asn){
         jdbcTemplate.update(insertAsn, asn.getAsn(), asn.getVendorId(), asn.getExpectedArrivalDate(), asn.getExpectedArrivalTime(), "IN TRANSIT", null);

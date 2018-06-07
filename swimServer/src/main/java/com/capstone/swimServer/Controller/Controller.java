@@ -33,4 +33,10 @@ public class Controller {
         return asnDao.getSerial(str);
     }
 
+    @CrossOrigin
+    @RequestMapping(value = "/statusChange", method= RequestMethod.POST)
+    public void statusChange(@RequestBody Asn asn){
+        service.updateASN(asn);
+    }
+
 }
