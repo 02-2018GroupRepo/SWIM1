@@ -3,6 +3,8 @@ import ASNDisplay from './ASNDisplay';
 import axios from 'axios';
 
 class ASNSearch extends React.Component {
+	
+	
    constructor(){
       super();
       this.state = {
@@ -15,6 +17,19 @@ class ASNSearch extends React.Component {
       event.preventDefault();
       const asn = document.getElementById('asn').value;
       console.log(asn);
+	   //you may see axios routes used like this as well
+	  const url = "http://localhost:8080/getSerial"
+	  axios.post(url, {
+	  header:{"Access-Control-Allow-Origin": "*" },
+		data: asn
+	  }).then(results = {
+	  	console.log(results);
+		  this.setState({
+	  	serialNumbers: results.data
+	  	})
+	  })
+	   
+	   
       axios({
          method: 'post',
          headers: {"Access-Control-Allow-Origin": "*"},
