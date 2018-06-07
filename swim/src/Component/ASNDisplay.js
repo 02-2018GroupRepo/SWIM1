@@ -1,6 +1,13 @@
 import React from 'react';
+import axios from 'axios';
 
 class ASNDisplay extends React.Component {
+	constructor(){
+		super();
+		this.state = {
+			serialNumbers: []
+		}
+	}
 	  
 
    render() {

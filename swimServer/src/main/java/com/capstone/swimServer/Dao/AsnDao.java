@@ -33,8 +33,8 @@ public class AsnDao {
         jdbcTemplate.update(insertSerial, asn, serial, null);
     }
 
-    public List getSerial(String asn){
-        List serials = jdbcTemplate.queryForList(getSerialQuery, asn);
+    public List getSerial(Asn asn){
+        List serials = jdbcTemplate.queryForList(getSerialQuery, asn.getAsn());
         return serials;
     }
 

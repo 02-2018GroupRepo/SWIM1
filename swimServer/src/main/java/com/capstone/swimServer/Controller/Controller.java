@@ -20,13 +20,16 @@ public class Controller {
 //        return asnDao.getASN();
 //    }
 
+    @CrossOrigin
     @RequestMapping(value = "/receiveAsn", method= RequestMethod.POST)
     public void insertAsn(@RequestBody Asn asn) {
         service.insertAsnSerial(asn);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/getSerial", method= RequestMethod.POST)
-    public @ResponseBody List getSerial(@RequestBody String str) {
+    public @ResponseBody List getSerial(@RequestBody Asn str) {
+        System.out.println(str.getAsn());
         return asnDao.getSerial(str);
     }
 
