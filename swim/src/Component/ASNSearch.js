@@ -27,6 +27,7 @@ class ASNSearch extends React.Component {
          this.setState({
             serialNumbers : results.data
          })
+
       })
    }
 
@@ -41,6 +42,13 @@ class ASNSearch extends React.Component {
    		styles = null;
 
    	}
+
+         // setTimeout(() => {
+         //    console.log(this.state.serialNumbers)
+         // }, 5000)
+
+         // console.log(this.state.serialNumbers)
+      
    	
    
 	      return (
@@ -50,7 +58,7 @@ class ASNSearch extends React.Component {
 	      		<input type="text" placeholder="Search.." id="asn" />
 	      		<button className="search-btn" onClick= {this.handleRequest} >Search</button>
 	      	</form>
-	      	<ASNDisplay /> 
+	      	<ASNDisplay serialNumbers = {this.state.serialNumbers}/> 
 	      	</div>
        
       );
