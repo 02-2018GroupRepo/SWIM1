@@ -6,17 +6,17 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Map;
 
 @Component
 public class AsnDao {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    private final String getASNQuery= "SELECT * FROM warehouse WHERE asn = ?";
+
+    private final String getAsnStatus = "SELECT status FROM warehouse WHERE asn = ?";
     private final String insertAsn= "INSERT INTO warehouse VALUES(?,?,?,?,?,?)";
     private final String insertSerial= "INSERT INTO itemizedAsn VALUES(?,?,?)";
-    private final String getSerialQuery = "SELECT serial FROM itemizedAsn WHERE = ";
+    private final String getSerialQuery = "SELECT serial FROM itemizedAsn WHERE asn = ?";
 
 //    private final String updateDockDoorQuery = "UPDATE warehouse SET dockDoor = ? WHERE asn = ?";
 
@@ -33,14 +33,8 @@ public class AsnDao {
         jdbcTemplate.update(insertSerial, asn, serial, null);
     }
 
-    //Find a better way than this to avoid potential injection
-    public Asn getAsn(String asn){
-        Asn asnList = jdbcTemplate.queryForObject(getASNQuery, new Object[] {asn}, Asn.class);
-        return asnList;
-    }
-
-    public List<Map<String, Object>> getSerial(String asn){
-        List<Map<String, Object>> serials = jdbcTemplate.queryForList(getSerialQuery, asn);
+    public List getSerial(Asn asn){
+        List serials = jdbcTemplate.queryForList(getSerialQuery, asn.getAsn());
         return serials;
     }
 

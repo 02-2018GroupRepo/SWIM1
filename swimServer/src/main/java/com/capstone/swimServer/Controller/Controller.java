@@ -4,18 +4,15 @@ import com.capstone.swimServer.Dao.AsnDao;
 import com.capstone.swimServer.Model.Asn;
 import com.capstone.swimServer.Service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 public class Controller {
     @Autowired
     private Service service;
+    @Autowired
     private AsnDao asnDao;
 
 //    @RequestMapping("/")
@@ -23,15 +20,17 @@ public class Controller {
 //        return asnDao.getASN();
 //    }
 
+    @CrossOrigin
     @RequestMapping(value = "/receiveAsn", method= RequestMethod.POST)
     public void insertAsn(@RequestBody Asn asn) {
         service.insertAsnSerial(asn);
     }
 
-    @RequestMapping(value = "/serialTest", method= RequestMethod.POST)
-    public List<Map<String, Object>> insertAsn(@RequestBody String str) {
+    @CrossOrigin
+    @RequestMapping(value = "/getSerial", method= RequestMethod.POST)
+    public @ResponseBody List getSerial(@RequestBody Asn str) {
+        System.out.println(str.getAsn());
         return asnDao.getSerial(str);
-
     }
 
 }
