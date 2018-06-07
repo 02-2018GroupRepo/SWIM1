@@ -39,4 +39,10 @@ public class Controller {
         service.updateASN(asn);
     }
 
+    @CrossOrigin
+    @RequestMapping(value = "/receivedList", method = RequestMethod.GET)
+    public @ResponseBody List receivedList(){
+        return asnDao.receivedList();
+    }
+
 }
