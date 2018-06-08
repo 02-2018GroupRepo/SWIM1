@@ -3,6 +3,17 @@ import ASNSearch from './ASNSearch';
 import ASNDisplay from './ASNDisplay';
 
 class DockDoor extends React.Component {
+	
+	
+	//try this way of writing state to see if it works
+	//showing other ways you will see state being written
+	//updated react doesnt require constructor or super
+	state = {
+		
+	selectDoor: 0
+	
+	}
+
 	constructor(){
 		super();
 		this.state = {
@@ -11,6 +22,7 @@ class DockDoor extends React.Component {
 		}
 	}
 
+	//clean and tight function #nice
    selected = (selection) => (event) => {
    	this.setState({[selection]: event.target.value })
    }
