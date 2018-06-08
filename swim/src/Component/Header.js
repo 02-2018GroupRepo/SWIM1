@@ -1,4 +1,5 @@
 import React from 'react';
+import swim from './swim.ico.jpg';
  
 
 class Header extends React.Component {
@@ -9,7 +10,7 @@ class Header extends React.Component {
 
         <div className="header">
 	         	<div className="logo">
-	         	Logo
+	         		<img class="logo" src={swim} />
 	         	</div>
 	         	<div className="page-title">
 	         	Page Title
