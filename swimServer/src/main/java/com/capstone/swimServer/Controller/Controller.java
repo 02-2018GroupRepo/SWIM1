@@ -40,9 +40,9 @@ public class Controller {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/receivedList", method = RequestMethod.GET)
-    public @ResponseBody List receivedList(){
-        return asnDao.receivedList();
+    @RequestMapping(value = "/getReceivedList", method = RequestMethod.GET)
+    public @ResponseBody List getReceivedList(){
+        return asnDao.getReceivedList();
     }
 
 }
