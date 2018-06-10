@@ -54,7 +54,7 @@ public class AsnDao {
         return serials;
     }
 
-    public List receivedList(){
+    public List getReceivedList(){
         List receivedList = jdbcTemplate.queryForList(getReceivedList, "RECEIVED");
         return receivedList;
     }

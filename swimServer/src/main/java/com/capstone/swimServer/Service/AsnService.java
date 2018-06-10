@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Service {
+public class AsnService {
     @Autowired
     AsnDao asnDao;
 
@@ -23,7 +23,9 @@ public class Service {
     }
 
     public void updateASN(Asn asn){
-        asnDao.updateDockDoor(asn.getDockDoor(), asn.getAsn());
+        if(asn.getDockDoor() != 0) {
+            asnDao.updateDockDoor(asn.getDockDoor(), asn.getAsn());
+        }
         updateSerials(asn);
     }
 
