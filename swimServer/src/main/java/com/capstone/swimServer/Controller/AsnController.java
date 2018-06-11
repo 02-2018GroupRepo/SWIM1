@@ -28,7 +28,7 @@ public class AsnController {
 
     @CrossOrigin
     @RequestMapping(value = "/getSerial", method= RequestMethod.POST)
-    public @ResponseBody List getSerial(@RequestBody Asn str) {
+    public List getSerial(@RequestBody Asn str) {
         System.out.println(str.getAsn());
         return asnDao.getSerial(str);
     }

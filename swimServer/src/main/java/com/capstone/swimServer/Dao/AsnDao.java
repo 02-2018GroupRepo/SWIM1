@@ -16,7 +16,8 @@ public class AsnDao {
     private final String getAsnStatus = "SELECT status FROM warehouse WHERE asn = ?";
     private final String insertAsn= "INSERT INTO warehouse VALUES(?,?,?,?,?,?)";
     private final String insertSerial= "INSERT INTO itemizedAsn VALUES(?,?,?)";
-    private final String getSerialQuery = "SELECT serial FROM itemizedAsn WHERE asn = ?";
+    private final String getSerialQuery = "SELECT serial FROM itemizedAsn WHERE asn = ? and status = 'IN TRANSIT'";
+    private final String getSerialQuery2 = "SELECT serial FROM itemizedAsn WHERE asn = ? and status = 'RECEIVED'";
     private final String updateDockDoor = "UPDATE warehouse SET dockDoor = ? WHERE asn = ?";
     private final String updateSerialStatus = "UPDATE itemizedAsn SET status = ? WHERE serial = ? AND asn = ?";
     private final String updateAsnStatus = "UPDATE warehouse SET status = ? WHERE asn = ?";
@@ -46,11 +47,20 @@ public class AsnDao {
     }
 
     public void insertSerial(int asn, int serial){
-        jdbcTemplate.update(insertSerial, asn, serial, null);
+        jdbcTemplate.update(insertSerial, asn, serial, "IN TRANSIT");
     }
 
     public List getSerial(Asn asn){
-        List serials = jdbcTemplate.queryForList(getSerialQuery, asn.getAsn());
+        List serials;
+        if(asn.getDockDoor() != 0){
+            System.out.println("Here");
+            serials = jdbcTemplate.queryForList(getSerialQuery, asn.getAsn());
+        }
+        else{
+            System.out.println("Here 2");
+            serials = jdbcTemplate.queryForList(getSerialQuery2, asn.getAsn());
+        }
+
         return serials;
     }
 
