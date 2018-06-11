@@ -47,7 +47,7 @@ public class AsnDao {
     }
 
     public void insertSerial(int asn, int serial){
-        jdbcTemplate.update(insertSerial, asn, serial, null);
+        jdbcTemplate.update(insertSerial, asn, serial, "IN TRANSIT");
     }
 
     public List getSerial(Asn asn){
