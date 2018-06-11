@@ -38,8 +38,10 @@ public class AsnService {
                 statusCount += 1;
             }
         }
-        if(statusCount == 0 && first.equals("RECEIVED") || first.equals("LOADED")){
+        if(statusCount == 0 && first.equals("RECEIVED")){
             asnDao.updateAsnStatus(first, asn.getAsn());
+        }else if(statusCount == 0 && first.equals("LOADED")){
+            asnDao.updateAsnStatus("DELIVERED", asn.getAsn());
         }
     }
 
