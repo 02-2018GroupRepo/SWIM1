@@ -22,7 +22,7 @@ public class SwimServerApplicationTests {
 	public void homePageLoads(){
 
 		WebDriver driver;
-		System.setProperty("webdriver.chrome.driver","../../../chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","../../../../chromedriver.exe");
 		driver = new ChromeDriver();
 		// Navigate to home page.
 		driver.get("https://www.thd-swim.site/");
@@ -40,7 +40,7 @@ public class SwimServerApplicationTests {
 	public void userCanLogin(){
 
 		WebDriver driver;
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Shahar\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","../../../../chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.thd-swim.site/");
 

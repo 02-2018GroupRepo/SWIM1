@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81d4de04-4198-4871-8dbb-c1833567be01" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swimServer/src/test/java/com/capstone/swimServer/SwimServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/swimServer/src/test/java/com/capstone/swimServer/SwimServerApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/swimServer/target/" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="SwimServerApplicationTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swimServer/src/test/java/com/capstone/swimServer/SwimServerApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+            <state relative-caret-position="175">
+              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,7 +59,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1050" />
   </component>
@@ -252,18 +251,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 13h 45m 46s.xml">
-      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 13h 53m 43s.xml">
-      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 13h 53m 58s.xml">
-      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 13h 54m 48s.xml">
-      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 13h 57m 33s.xml">
       <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
     </history-entry>
@@ -281,6 +268,18 @@
     </history-entry>
     <history-entry file="SwimServerApplicationTests_userCanLogin - 2018.06.13 at 14h 04m 40s.xml">
       <configuration name="SwimServerApplicationTests.userCanLogin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SwimServerApplicationTests_userCanLogin - 2018.06.13 at 14h 19m 27s.xml">
+      <configuration name="SwimServerApplicationTests.userCanLogin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 14h 49m 01s.xml">
+      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 14h 49m 26s.xml">
+      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 14h 49m 37s.xml">
+      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -310,7 +309,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="right" id="FAQ Robot" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.095703125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23242188" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -341,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swimServer/src/test/java/com/capstone/swimServer/SwimServerApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        <state relative-caret-position="175">
+          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -366,7 +365,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -426,7 +425,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
