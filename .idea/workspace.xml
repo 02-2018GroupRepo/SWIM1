@@ -29,8 +29,8 @@
       <file leaf-file-name="SwimServerApplicationTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swimServer/src/test/java/com/capstone/swimServer/SwimServerApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            <state relative-caret-position="103">
+              <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,7 +138,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SwimServerApplicationTests.userCanLogin">
+  <component name="RunManager" selected="JUnit.SwimServerApplicationTests.homePageLoads">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -232,8 +232,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SwimServerApplicationTests.userCanLogin" />
         <item itemvalue="JUnit.SwimServerApplicationTests.homePageLoads" />
+        <item itemvalue="JUnit.SwimServerApplicationTests.userCanLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -251,12 +251,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 13h 57m 33s.xml">
-      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SwimServerApplicationTests_userCanLogin - 2018.06.13 at 13h 58m 14s.xml">
-      <configuration name="SwimServerApplicationTests.userCanLogin" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SwimServerApplicationTests_userCanLogin - 2018.06.13 at 13h 59m 50s.xml">
       <configuration name="SwimServerApplicationTests.userCanLogin" configurationId="JUnit" />
     </history-entry>
@@ -279,6 +273,12 @@
       <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 14h 49m 37s.xml">
+      <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SwimServerApplicationTests_userCanLogin - 2018.06.13 at 14h 50m 07s.xml">
+      <configuration name="SwimServerApplicationTests.userCanLogin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SwimServerApplicationTests_homePageLoads - 2018.06.13 at 14h 51m 08s.xml">
       <configuration name="SwimServerApplicationTests.homePageLoads" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -340,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swimServer/src/test/java/com/capstone/swimServer/SwimServerApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        <state relative-caret-position="103">
+          <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -365,7 +365,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -425,7 +425,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
