@@ -29,7 +29,7 @@ public class SwimServerApplicationTests {
 
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 				.withTimeout(5, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS)
+				.pollingEvery(250, TimeUnit.MILLISECONDS)
 				.ignoring(org.openqa.selenium.NoSuchElementException.class);
 		// Makes sure the "SWIM DASHBOARD" section is displayed
 		wait.until(findDashboard -> driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div[2]/p"))).isDisplayed();
@@ -46,7 +46,7 @@ public class SwimServerApplicationTests {
 
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 				.withTimeout(5, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS)
+				.pollingEvery(250, TimeUnit.MILLISECONDS)
 				.ignoring(org.openqa.selenium.NoSuchElementException.class);
 		// Waits until it finds the username and password sections. Then enters in credentials.
 		wait.until(typeUsername -> driver.findElement(By.xpath("//*[@id=\"username\"]"))).sendKeys("1");
